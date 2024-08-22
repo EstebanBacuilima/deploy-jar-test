@@ -1,5 +1,6 @@
-FROM openjdk:17-jdk-slim
-ARG JAR_FILE=target/java_app-0.0.1.jar
-COPY ${JAR_FILE} java_app.jar
-EXPOSE 8082
-ENTRYPOINT ["java","-jar","java_app.jar"]
+# Usa una imagen base de OpenJDK para Spring Boot
+FROM openjdk:17-alpine
+# Copia el archivo JAR de la aplicación al contenedor
+COPY ./java_app-0.0.1.jar ./app.jar
+# Comando para iniciar la aplicación, usando las variables de entorno
+ENTRYPOINT ["java", "-jar", "/app.jar"]

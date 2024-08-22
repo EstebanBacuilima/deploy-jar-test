@@ -8,4 +8,4 @@ COPY dist/ /usr/share/nginx/html
 EXPOSE 80
 
 # Comando para ejecutar nginx
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
