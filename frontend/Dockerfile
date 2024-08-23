@@ -2,7 +2,7 @@
 FROM nginx:alpine
 
 # Copia el contenido del directorio dist al directorio de nginx
-COPY dist/ /usr/share/nginx/html
+COPY dist/edbp-quiz-app/ /usr/share/nginx/html
 
 # Expone el puerto 80
 EXPOSE 80
